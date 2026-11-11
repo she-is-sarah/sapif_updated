@@ -9,7 +9,7 @@ export const LINKS = {
   site: "https://mysapif.com",
 } as const;
 
-export const START_DATE = "November 18, 2026";
+export const START_DATE = "November 23, 2026";
 
 export type TrackId = "video" | "automation";
 

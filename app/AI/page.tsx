@@ -37,7 +37,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "AI Advantage | Sapif",
   description:
-    "Practical training in AI Video Creation and AI Automation with Sapif. Create with AI. Build with AI. Stay ahead. Starts November 18, 2026.",
+    `Practical training in AI Video Creation and AI Automation with Sapif. Create with AI. Build with AI. Stay ahead. Starts ${START_DATE}.`,
 };
 
 function Arrow() {
