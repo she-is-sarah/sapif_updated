@@ -10,6 +10,7 @@ import { Events } from "@/components/sapif/events"
 import { Community } from "@/components/sapif/community"
 import { Contact } from "@/components/sapif/contact"
 import { Footer } from "@/components/sapif/footer"
+import { AIAdvantagePopup } from "@/components/sapif/ai-advantage-popup"
 
 export default function SapifPage() {
   return (
@@ -26,6 +27,7 @@ export default function SapifPage() {
       <Community />
       <Contact />
       <Footer />
+      <AIAdvantagePopup />
     </main>
   )
 }
