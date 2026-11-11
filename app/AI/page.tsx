@@ -11,6 +11,7 @@ import {
   BUILD_VIDEO,
   LINKS,
   MARQUEE,
+  PRICE,
   START_DATE,
   VIDEO_AREAS,
   WHY,
@@ -45,6 +46,19 @@ function Arrow() {
     <svg className={styles.arrow} viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
       <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
+  );
+}
+
+function Price() {
+  return (
+    <p className={styles.price}>
+      <span className={styles.priceNow}>{PRICE.current}</span>
+      <del className={styles.priceWas}>
+        <span className="sr-only">Original price </span>
+        {PRICE.original}
+      </del>
+      <span className={styles.priceTag}>{PRICE.note}</span>
+    </p>
   );
 }
 
@@ -277,6 +291,7 @@ export default function AIAdvantagePage() {
               <p className={`${styles.lead} ${styles.bandLead}`}>
                 Learn how to use AI to transform ideas into images, videos, UGC content and brand commercials.
               </p>
+              <Price />
               <div className={styles.bandActions}>
                 <a className={`${styles.btn} ${styles.btnPurple}`} href={LINKS.video} target="_blank" rel="noopener noreferrer">
                   Join AI Video Creation <Arrow />
@@ -319,6 +334,7 @@ export default function AIAdvantagePage() {
                 Learn to build practical automations using Make.com, connect different applications, integrate AI into workflows
                 and create intelligent systems that solve real-world problems.
               </p>
+              <Price />
               <div className={styles.bandActions}>
                 <a className={`${styles.btn} ${styles.btnLime}`} href={LINKS.automation} target="_blank" rel="noopener noreferrer">
                   Join AI Automation <Arrow />
@@ -483,6 +499,10 @@ export default function AIAdvantagePage() {
           <p className={styles.finalLead}>
             Choose your track, explore what AI can help you create, and take the next step in developing your digital skills.
           </p>
+          <div className={styles.finalPrice}>
+            <span className={styles.finalPriceNote}>Price per course</span>
+            <Price />
+          </div>
 
           <div className={styles.finalCtas}>
             <a className={`${styles.bigCta} ${styles.bigCtaPaper}`} href={LINKS.video} target="_blank" rel="noopener noreferrer">
