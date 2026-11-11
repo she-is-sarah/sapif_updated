@@ -10,7 +10,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { START_DATE } from "@/app/AI/data"
+import { PRICE, START_DATE } from "@/app/AI/data"
 
 const STORAGE_KEY = "sapif-ai-advantage-popup-dismissed"
 const SHOW_DELAY_MS = 1200
@@ -89,9 +89,23 @@ export function AIAdvantagePopup() {
             <span className="font-semibold text-[#f4f1ea]">{START_DATE}</span>.
           </DialogDescription>
 
+          <p className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-2">
+            <span className="text-3xl font-extrabold tracking-tight text-white">
+              {PRICE.current}
+            </span>
+            <del className="text-base font-semibold text-[#a39db3] decoration-2">
+              <span className="sr-only">Original price </span>
+              {PRICE.original}
+            </del>
+            <span className="rounded-full border border-[#c8f169]/50 px-3 py-1 font-mono text-[0.65rem] tracking-[0.14em] text-[#c8f169] uppercase">
+              Limited time
+            </span>
+          </p>
+          <p className="mt-1.5 text-xs text-[#a39db3]">Per course. One-off price.</p>
+
           <Link
             href="/AI"
-            className="group mt-8 inline-flex min-h-12 items-center gap-2.5 rounded-full bg-[#8c52ff] px-6 py-3 text-[0.95rem] font-semibold text-white shadow-[0_10px_30px_-12px_rgba(140,82,255,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#9c68ff] focus-visible:ring-2 focus-visible:ring-[#c8f169] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0e0d12] focus-visible:outline-none active:translate-y-0 active:scale-[0.98]"
+            className="group mt-7 inline-flex min-h-12 items-center gap-2.5 rounded-full bg-[#8c52ff] px-6 py-3 text-[0.95rem] font-semibold text-white shadow-[0_10px_30px_-12px_rgba(140,82,255,0.8)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#9c68ff] focus-visible:ring-2 focus-visible:ring-[#c8f169] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0e0d12] focus-visible:outline-none active:translate-y-0 active:scale-[0.98]"
           >
             Learn more
             <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />

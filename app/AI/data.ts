@@ -11,6 +11,13 @@ export const LINKS = {
 
 export const START_DATE = "November 23, 2026";
 
+// Price per course. Edit here and the page and the homepage popup update together.
+export const PRICE = {
+  current: "\u20A610,000",
+  original: "\u20A650,000",
+  note: "Limited time \u00B7 one-off price",
+} as const;
+
 export type TrackId = "video" | "automation";
 
 export type Step = {
